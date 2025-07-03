@@ -1,0 +1,54 @@
+app:
+  name: "AI Safety System"
+  version: "1.0.0"
+  debug: false
+
+models:
+  ollama:
+    base_url: "http://localhost:11434"
+    default_model: "llama3.1:8b"
+    timeout: 120
+  huggingface:
+    cache_dir: "~/.cache/huggingface"
+    device: "auto"
+
+detectors:
+  toxicity:
+    enabled: true
+    threshold: 0.7
+    model: "martin-ha/toxic-comment-model"
+  pii:
+    enabled: true
+    sensitivity: 0.8
+    model: "en_core_web_sm"
+  prompt_injection:
+    enabled: true
+    threshold: 0.5
+  topic:
+    enabled: true
+    threshold: 0.7
+    model: "all-MiniLM-L6-v2"
+  fact_check:
+    enabled: true
+    threshold: 0.5
+  spam:
+    enabled: true
+    threshold: 0.6
+
+guardrails:
+  input_enabled: true
+  output_enabled: true
+  config_dir: "configs/guardrails"
+
+chat:
+  max_history: 100
+  max_message_length: 10000
+  session_timeout: 3600
+
+api:
+  cors_origins:
+    - "http://localhost:3000"
+    - "http://127.0.0.1:3000"
+  rate_limit:
+    enabled: false
+    requests_per_minute: 60
