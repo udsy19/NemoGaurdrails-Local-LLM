@@ -47,6 +47,15 @@ graph TB
 | **Fact-Check** | Heuristic analysis | False information detection | 88%+ |
 | **Spam** | Pattern recognition | Spam/promotional content | 93%+ |
 
+## Example Screenshots
+![CleanShot 2025-07-04 at 14 02 06@2x](https://github.com/user-attachments/assets/6f0c8eae-3ef6-4fd6-a94b-109bf53c6871)
+- **Allowed Reuest**
+
+
+![CleanShot 2025-07-04 at 14 03 09@2x](https://github.com/user-attachments/assets/7771d4a1-d7bf-45c9-aa72-499f8f4c82a9)
+- **Denied Request**
+
+
 ## 🚀 Quick Start
 
 ### Prerequisites
